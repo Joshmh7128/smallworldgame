@@ -5,7 +5,7 @@ using UnityEngine;
 public class SceneryAdditiveScript : MonoBehaviour
 {
     // our animal choices
-    public enum animalChoices { none, preyBird, predatorBird, preyAnimal, predatorAnimal, butterflyAnimal};
+    public enum animalChoices { none, preyBird, predatorBird, preyAnimal, predatorAnimal, butterflyAnimal, frogAnimal};
     // our animal choice
     public animalChoices animalChoice;
     // our animal spawn script
@@ -44,6 +44,10 @@ public class SceneryAdditiveScript : MonoBehaviour
                 break;
 
             case 5:
+                animalSpawnScript.butterflyAttraction += 0.1f;
+                break;
+
+            case 6:
                 animalSpawnScript.butterflyAttraction += 0.1f;
                 break;
         }

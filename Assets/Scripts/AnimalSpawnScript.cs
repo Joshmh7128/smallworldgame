@@ -14,6 +14,7 @@ public class AnimalSpawnScript : MonoBehaviour
     // 
     [SerializeField] GameObject preyBirdPrefab;
     [SerializeField] GameObject butterflyPrefab;
+    [SerializeField] GameObject frogPrefab;
 
     void Start()
     {
@@ -38,6 +39,14 @@ public class AnimalSpawnScript : MonoBehaviour
         if (butterflyAttraction >= 1)
         {
             AnimalCreation((int)butterflyAttraction, butterflyPrefab);
+        }
+        yield return new WaitForSeconds(1f);
+
+        spawnerPos = new Vector3(Random.Range(-60, 60), 0.5f, Random.Range(70, -70));
+
+        if (frogAttraction >= 1)
+        {
+            AnimalCreation((int)frogAttraction, frogPrefab);
         }
         yield return new WaitForSeconds(1f);
 
