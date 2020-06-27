@@ -8005,6 +8005,7 @@ GameObject:
   - component: {fileID: 6049525581811900104}
   - component: {fileID: -4125940701975999762}
   - component: {fileID: 8413007233885176372}
+  - component: {fileID: 8590770858775362700}
   m_Layer: 0
   m_Name: Prey Bird Prefab
   m_TagString: Untagged
@@ -8041,6 +8042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalChoice: 2
   animalSpawnScript: {fileID: 0}
+  doesRotate: 0
 --- !u!114 &8413007233885176372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8053,8 +8055,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc98f53edd1b0341be5457d62f0c660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetType: 0
   target: {fileID: 0}
-  speed: 1
+  speed: 0
+--- !u!114 &8590770858775362700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6049525581811900119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ccbdb710569ea4481faa0efe6281a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6049525583062134612
 GameObject:
   m_ObjectHideFlags: 0

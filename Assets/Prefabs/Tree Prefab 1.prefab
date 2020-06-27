@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &664339708569416892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 679439836082609744}
+  m_Layer: 0
+  m_Name: FruitSpawn4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &679439836082609744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664339708569416892}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.47, y: 4.65, z: -1.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1890291462843258005}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1890291460807679159
 GameObject:
   m_ObjectHideFlags: 0
@@ -7590,6 +7620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890291462843258005}
   - component: {fileID: -3466592602258912505}
+  - component: {fileID: 6837742992314028852}
   m_Layer: 0
   m_Name: Tree Prefab 1
   m_TagString: Untagged
@@ -7608,12 +7639,44 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 615391922106200046}
   - {fileID: 3695849598036600590}
+  - {fileID: 2270219725489209988}
+  - {fileID: 7291491374638405817}
+  - {fileID: 679439836082609744}
   - {fileID: 4282887294597307356}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3466592602258912505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890291462843258004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9dc86a325f8014a9d8df678c703eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalChoice: 1
+  animalSpawnScript: {fileID: 0}
+  doesRotate: 0
+--- !u!114 &6837742992314028852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890291462843258004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7b4f2e7183ec4f900ddb43f32ba10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tm: {fileID: 0}
+  fruitToSpawn: {fileID: 1339088705196507289, guid: 11e7f02cd7486d940a044cf1926430be,
+    type: 3}
 --- !u!1 &6012787245205626851
 GameObject:
   m_ObjectHideFlags: 0
@@ -7654,7 +7717,7 @@ Transform:
   - {fileID: 1890291461733978361}
   - {fileID: 1890291462366025843}
   m_Father: {fileID: 1890291462843258005}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7388525711232984313
 GameObject:
@@ -7666,7 +7729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3695849598036600590}
   m_Layer: 0
-  m_Name: FruitSpawn
+  m_Name: FruitSpawn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7684,9 +7747,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1890291462843258005}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8098728630191792668
+--- !u!1 &7494107796639412483
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7694,39 +7757,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 615391922106200046}
+  - component: {fileID: 2270219725489209988}
   m_Layer: 0
-  m_Name: Perch
+  m_Name: FruitSpawn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &615391922106200046
+--- !u!4 &2270219725489209988
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8098728630191792668}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.39800006, y: 3.501, z: -0.149}
+  m_GameObject: {fileID: 7494107796639412483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.544, y: 2.8, z: -0.934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1890291462843258005}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-3466592602258912505
-MonoBehaviour:
+--- !u!1 &7639864433108115950
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890291462843258004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a9dc86a325f8014a9d8df678c703eac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalChoice: 1
-  animalSpawnScript: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7291491374638405817}
+  m_Layer: 0
+  m_Name: FruitSpawn3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7291491374638405817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7639864433108115950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.79, y: 4.19, z: 1.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1890291462843258005}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
