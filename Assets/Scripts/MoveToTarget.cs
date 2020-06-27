@@ -13,18 +13,16 @@ public class MoveToTarget : MonoBehaviour
     {
         if(target != null)
         {
-            if(Vector3.Distance(transform.position, target.transform.position) > hitDistance)
+            Debug.DrawLine(transform.position, target.transform.position, Color.red);
+
+            if (Vector3.Distance(transform.position, target.transform.position) > hitDistance)
             {
                 float step = speed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
 
                 Vector3 targetDirection = target.transform.position - transform.position;
 
-                float singleStep = speed * Time.deltaTime;
-
-                Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-
-                Debug.DrawLine(transform.position, target.transform.position, Color.red);
+                Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, step * 2f, 0.0f);
 
                 transform.rotation = Quaternion.LookRotation(newDirection);
             }  
