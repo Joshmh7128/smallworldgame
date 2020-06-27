@@ -2143,7 +2143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9dc86a325f8014a9d8df678c703eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalChoice: 5
+  animalChoice: 3
   animalSpawnScript: {fileID: 0}
   doesRotate: 1
 --- !u!1 &7226902889800550711

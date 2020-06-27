@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveToTarget : MonoBehaviour
 {
-    public enum targetChoice { none, fruit };
+    public enum targetChoice { none, fruit, pond, preybird};
     public targetChoice targetType;
     public GameObject target;
     public float speed;
@@ -37,12 +37,13 @@ public class MoveToTarget : MonoBehaviour
             else
             {
                 tm.fruits.Remove(target);
-                GameObject resp = Instantiate(tm.respawner, target.transform.position, Quaternion.identity);
                 if(target.CompareTag("Fruit"))
                 {
+                    GameObject resp = Instantiate(tm.respawner, target.transform.position, Quaternion.identity);
                     resp.GetComponent<Respawner>().itemKey = 0;
                 }
                 Destroy(target);
+                gameObject.GetComponent<KillTime>().RemainingTime += 5; // add 5 seconds to the timer if you get to your targets
                 //tm.RemoveNulls();
             }
         }
@@ -57,6 +58,24 @@ public class MoveToTarget : MonoBehaviour
                         int targetPicker;
                         targetPicker = Random.Range(0, tm.fruits.Count);
                         target = tm.fruits[targetPicker];
+                    }
+                    break;
+
+                case 2:
+                    if (tm.ponds.Count > 0)
+                    {
+                        int targetPicker;
+                        targetPicker = Random.Range(0, tm.ponds.Count);
+                        target = tm.ponds[targetPicker];
+                    }
+                    break;
+
+                case 3:
+                    if (tm.preyBirds.Count > 0)
+                    {
+                        int targetPicker;
+                        targetPicker = Random.Range(0, tm.preyBirds.Count);
+                        target = tm.preyBirds[targetPicker];
                     }
                     break;
             }

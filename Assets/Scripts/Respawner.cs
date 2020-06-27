@@ -5,7 +5,7 @@ using UnityEngine;
 public class Respawner : MonoBehaviour
 {
     public float respawnTime = 10f;
-    public int itemKey = 0;
+    public int itemKey;
     public GameObject[] items;
     private TargetManager tm;
 
@@ -23,6 +23,6 @@ public class Respawner : MonoBehaviour
         {
             tm.fruits.Add(spawned);
         }
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }
