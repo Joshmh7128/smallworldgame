@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class MoveToTarget : MonoBehaviour
 {
+    public enum targetChoice { none, fruit };
+    public targetChoice targetType;
     public GameObject target;
     public float speed;
     private float hitDistance = 0.001f;
+    private TargetManager tm;
+
+    private void Start()
+    {
+        tm = Camera.main.GetComponent<TargetManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -28,7 +36,29 @@ public class MoveToTarget : MonoBehaviour
             }  
             else
             {
-                Debug.Log(gameObject.name + " reached target: " + target.name);
+                tm.fruits.Remove(target);
+                GameObject resp = Instantiate(tm.respawner, target.transform.position, Quaternion.identity);
+                if(target.CompareTag("Fruit"))
+                {
+                    resp.GetComponent<Respawner>().itemKey = 0;
+                }
+                Destroy(target);
+                //tm.RemoveNulls();
+            }
+        }
+        else
+        {
+            int i = (int)targetType;
+            switch(i)
+            {
+                case 1:
+                    if (tm.fruits.Count > 0)
+                    {
+                        int targetPicker;
+                        targetPicker = Random.Range(0, tm.fruits.Count);
+                        target = tm.fruits[targetPicker];
+                    }
+                    break;
             }
         }
     }
