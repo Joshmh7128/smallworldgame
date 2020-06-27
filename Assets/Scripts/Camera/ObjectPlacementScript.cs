@@ -8,20 +8,24 @@ public class ObjectPlacementScript : MonoBehaviour
     // basic object stuff
     public GameObject placeableGrassObjectPrefab; // the object we are placing
     public GameObject placeableTreeObjectPrefab; // the object we are placing
+    public GameObject placeableFlowerObjectPrefab; // the object we are placing
     public GameObject placeableObjectPrefab = null;
     private GameObject currentPlaceableObject; // the object we placed last
 
     // UI and world stuff
-    public bool buildMode = false; // are we in build mode?
+    public bool buildMode; // are we in build mode?
     public Vector3 mouseWorldPos; // what is our mouses world position?
     public Button GrassButton;
     public Button TreeButton;
+    public Button FlowerButton;
 
     // start runs at the start of the object
     public void Start()
     {
+        buildMode = true;
         GrassButton.onClick.AddListener(delegate { SelectObject(placeableGrassObjectPrefab); });
         TreeButton.onClick.AddListener(delegate { SelectObject(placeableTreeObjectPrefab); });
+        FlowerButton.onClick.AddListener(delegate { SelectObject(placeableFlowerObjectPrefab); });
     }
 
     // update runs every tick
@@ -34,13 +38,13 @@ public class ObjectPlacementScript : MonoBehaviour
             MoveCurrentObjectToMouse(); // moves the placement to mouse
             ReleaseIfClicked(); // releases the object we're placing
         }
-
+        /*
         // toggle build mode
         if (Input.GetKeyDown("f"))
         {
             // toggle build mode
             buildMode = !buildMode;
-        }
+        }*/
 
         // get our mouses world position
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
