@@ -11,6 +11,7 @@ public class TreeScript : MonoBehaviour
     private float spawnChance = 0.25f;
     public TargetManager tm;
     public GameObject fruitToSpawn;
+    private float RespawnTime = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -47,4 +48,5 @@ public class TreeScript : MonoBehaviour
         }
 
     }
+
 }

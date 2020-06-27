@@ -36,9 +36,14 @@ public class MoveToTarget : MonoBehaviour
             }  
             else
             {
-                Debug.Log(gameObject.name + " reached target: " + target.name);
+                tm.fruits.Remove(target);
+                GameObject resp = Instantiate(tm.respawner, target.transform.position, Quaternion.identity);
+                if(target.CompareTag("Fruit"))
+                {
+                    resp.GetComponent<Respawner>().itemKey = 0;
+                }
                 Destroy(target);
-                tm.RemoveNulls();
+                //tm.RemoveNulls();
             }
         }
         else

@@ -20,7 +20,7 @@ public class SceneryAdditiveScript : MonoBehaviour
             transform.Rotate(0.0f, Random.Range(0.0f, 360.0f), 0.0f);
         }
 
-        animalSpawnScript = GameObject.Find("AnimalSpawner").GetComponent<AnimalSpawnScript>();
+        //animalSpawnScript = GameObject.Find("AnimalSpawner").GetComponent<AnimalSpawnScript>();
 
         int i = (int)animalChoice;
 
