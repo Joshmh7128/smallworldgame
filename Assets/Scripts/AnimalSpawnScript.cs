@@ -9,8 +9,11 @@ public class AnimalSpawnScript : MonoBehaviour
     public float predatorBirdAttraction;
     public float preyAnimalAttraction;
     public float predatorAnimalAttraction;
+    public float butterflyAttraction;
+    public float frogAttraction;
     // 
     [SerializeField] GameObject preyBirdPrefab;
+    [SerializeField] GameObject butterflyPrefab;
 
     void Start()
     {
@@ -26,9 +29,21 @@ public class AnimalSpawnScript : MonoBehaviour
 
         if (preyBirdAttraction >= 1)
         {
-            AnimalCreation((int)preyBirdAttraction*10, preyBirdPrefab);
+            AnimalCreation((int)preyBirdAttraction, preyBirdPrefab);
         }
         yield return new WaitForSeconds(1f);
+
+        spawnerPos = new Vector3(Random.Range(-60, 60), 0.5f, Random.Range(70, -70));
+
+        if (butterflyAttraction >= 1)
+        {
+            AnimalCreation((int)butterflyAttraction, butterflyPrefab);
+        }
+        yield return new WaitForSeconds(1f);
+
+
+
+
         StartCoroutine("AnimalSpawner");
     }
 
@@ -41,4 +56,6 @@ public class AnimalSpawnScript : MonoBehaviour
             times -= 1;
         }
     }
+
+    
 }

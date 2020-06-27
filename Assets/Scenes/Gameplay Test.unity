@@ -347,7 +347,6 @@ GameObject:
   - component: {fileID: 650814210}
   - component: {fileID: 650814212}
   - component: {fileID: 650814211}
-  - component: {fileID: 650814213}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -372,10 +371,10 @@ RectTransform:
   m_Father: {fileID: 734755977}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 264.64014, y: 95.600006}
-  m_SizeDelta: {x: 412.49902, y: 116.39386}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -222.19, y: 83.3}
+  m_SizeDelta: {x: 395.28387, y: 117.39386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650814211
 MonoBehaviour:
@@ -414,25 +413,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650814209}
   m_CullTransparentMesh: 0
---- !u!95 &650814213
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650814209}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2fc56cf2f93b2884e9495e9ee086e397, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1380,11 @@ MonoBehaviour:
   predatorBirdAttraction: 0
   preyAnimalAttraction: 0
   predatorAnimalAttraction: 0
+  butterflyAttraction: 0
+  frogAttraction: 0
   preyBirdPrefab: {fileID: 6049525581811900119, guid: a4cabf0363a0a7548ae5bb882f93bf79,
+    type: 3}
+  butterflyPrefab: {fileID: 6880740105792121415, guid: a421d9c77cada8a4193423e8d1ecae9d,
     type: 3}
 --- !u!4 &2122634920
 Transform:
